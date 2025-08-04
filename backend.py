@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def generate_prescription(symptoms_text):
-    chat = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=os.getenv("GOOGLE_API_KEY"))
+    chat = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=os.getenv("GOOGLE_API_KEY"))
 
     prompt = f"""
     You are a professional medical assistant.
