@@ -9,13 +9,9 @@ def generate_prescription(symptoms_text):
     chat = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=os.getenv("GOOGLE_API_KEY"))
 
     prompt = f"""
-    You are a professional medical assistant.
-    Based on the following symptoms or spoken notes from a doctor, generate a complete prescription including:
-    - Diagnosis
-    - Medications (with dosage)
-    - Any important instructions
+    I am a doctor, i will give some notes, now just identfy the medicine names and list them.
 
-    Symptoms/Notes:
+    Notes:
     {symptoms_text}
     """
 
